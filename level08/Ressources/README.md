@@ -28,3 +28,11 @@ ln -s ~/token /tmp/tOken
 ./level08 /tmp/tOken
 quif5eloekouj29ke0vouxean
 ```
+ce token fonctionne pour flag08:
+```shell
+su flag08
+Password: 
+Don't forget to launch getflag !
+getflag
+Check flag.Here is your token : 25749xKZ8L7DkSCwJkT9dyv6f
+```
