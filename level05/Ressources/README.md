@@ -23,7 +23,7 @@ chmod 755 /opt/openarenaserver/essais
 ```
 au bout de 2 mn le fichier a disparu...
 
-On va creer un fichier run qui execute getflag et renvoi le token dans un repertoire. le seul ou l'on peut 2crire est /tmp
+On va creer un fichier run qui execute getflag et renvoi le token dans un repertoire. le seul ou l'on peut écrire est /tmp
 
 ```shell
 echo 'getflag > /tmp/token' > /opt/openarenaserver/run
