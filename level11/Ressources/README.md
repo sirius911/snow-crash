@@ -40,7 +40,8 @@ while 1 do
   client:close()
 end
 ```
-Ce code est écrit en Lua et il implémente un serveur simple qui écoute sur le port 5151 de l'adresse IP 127.0.0.1. Le serveur demande à l'utilisateur d'entrer un mot de passe, le hache en utilisant la fonction "hash", et le compare à une chaîne de hachage spécifique.
+Ce code est écrit en Lua et il implémente un serveur simple qui écoute sur le port 5151 de l'adresse IP 127.0.0.1. Le serveur demande à l'utilisateur d'entrer un mot de passe, 
+le hache en utilisant la fonction "hash", et le compare à une chaîne de hachage spécifique.
 
 La fonction "hash" utilise le programme sha1sum pour calculer le hash SHA-1 du mot de passe entré par l'utilisateur. La fonction retourne la chaîne de hachage SHA-1 de longueur 40 caractères.
 

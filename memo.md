@@ -18,7 +18,8 @@ echo
 
 ### Level04:
 
-Injection de code
+Injection de code avec curl '':x
+
 
 ### Level05:
 
@@ -26,7 +27,7 @@ cron
 
 ### Level06:
 
-Injection de code
+Injection de code '[x ${${exec(getflag)}}]' >/tmp/coucou
 
 ### Level07:
 
@@ -38,7 +39,7 @@ t0ken
 
 ### Level09:
 
-aaaa -> abcd
+aaaa -> abcd $(cat token)
 
 ### Level10
 
