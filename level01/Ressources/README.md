@@ -19,7 +19,7 @@ flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
 ```
 on un mdp hashed a casser.
 
-il faut déjà je télécharger dans un shell:
+il faut déjà le télécharger dans un shell:
 ```shell
 scp -P 4242 level01@ip:/etc/passwd .
 ```
@@ -52,3 +52,10 @@ on a notre mdp pour flag01: **abcdefg**
 ```shell
 su flag01
 getflag
+```
+
+**info** : j'ai fait un docker contenant déjà john the ripper:
+on donc :
+```shell
+sudo docker run --rm -v $(pwd):/Ressources -it clorin/kali-john /bin.bash
+```
