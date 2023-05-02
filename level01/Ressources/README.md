@@ -57,5 +57,5 @@ getflag
 **info** : j'ai fait un docker contenant déjà john the ripper:
 on donc :
 ```shell
-sudo docker run --rm -v $(pwd):/Ressources -it clorin/kali-john /bin.bash
+sudo docker run --rm -v $(pwd):/Ressources -it clorin/kali-john /bin/bash
 ```
